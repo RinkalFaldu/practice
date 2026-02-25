@@ -11,6 +11,7 @@ public class invertedstar {
             for (int star = 1; star <= 4-line+1; star++){
                 System.out.print( " * ");
             }
+            // this line get back to next line 
             System.out.println();
         }
 

@@ -1,0 +1,12 @@
+public class halfpyramid {
+    public static void main(String[] args) {
+        
+        for ( int line = 1; line <=4; line++){
+            for (int number=1; number <=line ; number++){
+                System.err.print(" " +number + " ");
+            }
+            System.err.println();
+        }
+    }
+    
+}
