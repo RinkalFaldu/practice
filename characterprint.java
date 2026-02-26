@@ -1,3 +1,9 @@
+//this problem prints
+//A
+//B C
+//D E F
+//G H I J
+
 public class characterprint {
     public static void main(String[] args) {
         char ch = 'A';

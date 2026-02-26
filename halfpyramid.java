@@ -1,3 +1,8 @@
+//this code prints
+//1
+//1  2
+//1  2  3
+//1  2  3  4
 public class halfpyramid {
     public static void main(String[] args) {
         
