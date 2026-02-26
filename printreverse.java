@@ -8,7 +8,7 @@ public class printreverse {
         while(num > 0){
            int lastDigit = num % 10;        //find last digit
            System.out.print(lastDigit);
-           num = num / 10;                   //remove last digit
+           num = num / 10;                   //remove last digit from number to get next last
         }
        System.out.println();
     }

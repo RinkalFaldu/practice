@@ -24,7 +24,7 @@ public class isprime {
         System.out.println();
     }
     public static void main(String[] args) {
-        primeInRange (20);   
+        primeInRange (100);   
     }
     
 }
