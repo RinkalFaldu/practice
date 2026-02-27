@@ -15,9 +15,6 @@
  //Divide 1 by 2:
  //Quotient = 0, Remainder = 0.
 
-
-
-
 import java.util.*;
 public class decimaltobinary {
     // binary to decimal 
