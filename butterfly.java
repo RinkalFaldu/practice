@@ -1,3 +1,13 @@
+// this code print following butterfly pattern
+//*      *
+//**    **
+//***  ***
+//********
+//********
+//***  ***
+//**    **
+//*      *
+
 public class butterfly {
     public static void butrfly(int n) {
         //1st half
