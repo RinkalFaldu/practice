@@ -53,5 +53,6 @@ public class decimaltobinary {
     }
     public static void main(String[] args) {
         decToBin(75);
+        binToDec(1001011);
     }
 }
