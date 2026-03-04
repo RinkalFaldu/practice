@@ -1,4 +1,7 @@
 // this code finds largest and smallest value from given array
+// this code prints following output using input int numbers[] = {1,2,6,3,5};
+// Smallest value is: 1
+// Largest value is: 6
 package Arrays;
 import java.util.*;
 public class LargestNumber {

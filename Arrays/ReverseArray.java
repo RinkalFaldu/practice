@@ -1,6 +1,8 @@
 // this code reverse and array without creating new array
 // Time complexity : O(n)
 // space complexity: O(1)
+// this code prints following output  using input int numbers [] = { 2, 4, 6, 8, 10};
+// 10 8 6 4 2 
 package Arrays;
 
 public class ReverseArray {

@@ -1,5 +1,9 @@
 // to implement binary search need array in sorted 
 // Time complexity O (log n)
+// this code prints following output using input int numbers[] = {2, 4, 6, 8, 10, 12, 14};
+//                                               int key = 10;
+// Index for key is: 4
+// to used binary search we need array in sorted
 
 package Arrays;
 

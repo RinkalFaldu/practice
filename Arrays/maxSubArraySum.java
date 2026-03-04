@@ -1,5 +1,22 @@
 // time complexity : O (n^3) 
 // this code used brute force approach to solve problem 
+// this code prints following output  using input int numbers [] = {1,-2,6,-1,3};
+// 1
+//-1
+//5
+//4
+//7
+//-2
+//4
+//3
+//6
+//6
+//5
+//8
+//-1
+//2
+//3
+//max sum = 8
 
 package Arrays;
 

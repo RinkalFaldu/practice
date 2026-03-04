@@ -1,6 +1,9 @@
 // formula to calculate trapping rain water = ( water level - bar height) * width 
 // water level = min ( max left boundry , max right boundry)
 // time complexity = O (n)
+// this code print following output using input int height[] = { 4,2,0,6,3,2,5};
+// 11
+
 package Arrays;
 
 public class trappingRainwater {
@@ -9,7 +12,6 @@ public class trappingRainwater {
         // calculate left max boundary - array
         int leftmax[] = new int [n];
         leftmax [0] = height [0];              // max of first element is element it self
-
         for ( int i =1; i < n; i++){
             leftmax [i] = Math.max(height [i], leftmax[i -1]);
             

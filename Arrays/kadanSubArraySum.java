@@ -1,6 +1,8 @@
 // time complexity : O (n) 
 // this code used optimize best approach to solve problem of sub array sum 
 //  this code replace with 0 is max sum is negative 
+// this code prints following output  using input int numbers [] = {-2, -3, 4, -1, -2, 1, 5, -3};
+// our max Subarray sum is : 7
 
 package Arrays;
 
