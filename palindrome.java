@@ -1,6 +1,7 @@
 // this code checkes if given number is palindrome or not e.g. 123321
 public class palindrome {
 
+
     public static void isPalindrome (int number){
         int mynum = number;
         int reverse = 0;

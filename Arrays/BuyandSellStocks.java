@@ -1,6 +1,6 @@
 // this code prints following output with inputint prices [] = {7,1,5,3,6,4}; 
 // 5
-// time complexity of this code is O(n)
+// time complexity of this code is O (n)
 package Arrays;
 
 public class BuyandSellStocks {
@@ -10,7 +10,6 @@ public class BuyandSellStocks {
         for ( int i = 0; i<prices.length ; i++){
             if (buyPrice < prices [i]) {
                 int profit = prices[i] - buyPrice;   // today's profit
-                
                 maxProfit = Math.max (maxProfit, profit );
 
             }
