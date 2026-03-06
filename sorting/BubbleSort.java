@@ -14,7 +14,6 @@ public class BubbleSort {
                 }
             }
         }
-
     }
 
     // function to print array
