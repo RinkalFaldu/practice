@@ -8,17 +8,17 @@ public class CountingSort {
         for ( int i = 0; i < arr.length; i++){
             largest = Math.max (largest, arr [i]);
         }
-        int count [] = new int [largest +1];
+        int frequency [] = new int [largest +1];
         for (int i =0; i< arr.length; i++){
-            count [arr[i]]++;
+            frequency [arr[i]]++;
         }
-        // sorting iterate on frequency array count
+        // sorting iterate on frequency array 
         int j =0;
-        for ( int i =0; i< count.length ; i++){
-            while (count [i] > 0) {
+        for ( int i =0; i< frequency.length ; i++){
+            while (frequency [i] > 0) {
                 arr [j] = i;
                 j++;
-                count [i] --;
+                frequency [i] --;
 
             }
         }
@@ -32,7 +32,7 @@ public class CountingSort {
     }
 
     public static void main(String[] args) {
-        int arr[] = {5,4,1,3,2};
+        int arr[] = {1,4,1,3,2,4,3,7};
         counting(arr);
         printArr(arr);
     }
