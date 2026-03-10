@@ -1,5 +1,14 @@
 // this digonal sum only used for same numer of raw and columns 
 // means n = m. e.g. 4 * 4
+// time complexity of brute force : O (n^2)
+// time complexity of optimize: O (n)
+// input =  int matrix [][] = { {1, 2, 3, 4},
+//                              {5, 6, 7, 8},
+//                              {9, 10,11,12},
+//                              {13,14,15,16} };
+// Output = 68
+//                                                
+
 package TwoDArray;
 
 public class DiagonalSum {     
