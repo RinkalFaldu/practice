@@ -1,3 +1,4 @@
+// leetcode problem Number 1572: Matrix Diagonal Sum
 // this digonal sum only used for same numer of raw and columns 
 // means n = m. e.g. 4 * 4
 // time complexity of brute force : O (n^2)
