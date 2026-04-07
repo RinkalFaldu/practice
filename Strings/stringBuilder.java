@@ -1,5 +1,6 @@
 // this string Builder changed next string without copeing previous string
 // it modift directly in next string without making copy of previous string
+// this is more efficient
 
 package Strings;
 public class stringBuilder {
