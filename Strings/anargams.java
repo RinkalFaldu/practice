@@ -1,3 +1,6 @@
+// check for anargam string
+// str1 and str2 has same characters without considering order of characters 
+
 package Strings;
 import java.util.Arrays;
 public class anargams{
