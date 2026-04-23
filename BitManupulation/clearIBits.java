@@ -1,9 +1,13 @@
+// ~0 = 1 1 1 1
+// 1 1 1 1 << i (2) =     1 1 0 0
+// 1 1 1 1 & 1 1 0 0 = 1 1 0 0  
+
 package BitManupulation;
 
 public class clearIBits { 
     // this function clears bit until i from last
     public static int clearBits (int n, int i){
-             int bitMask = (~0)<<i;
+             int bitMask = (~0)<<i;                  
              return n & bitMask;
     }
     public static void main(String[] args) {
