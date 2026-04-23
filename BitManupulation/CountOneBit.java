@@ -1,5 +1,8 @@
 // to represent any integer into binary we need log base 2 n + 1
 // time complexity of this program is O (log n)
+// input = 14 = 1 1 1 0
+// output = 3
+// count number of set bit
 package BitManupulation;
 
 public class CountOneBit {
@@ -17,7 +20,7 @@ public class CountOneBit {
 
     }
     public static void main(String[] args) {
-        System.out.println(countSetBitInNumber(14));
+        System.out.println(countSetBitInNumber(14));  // 1 1 1 0
         
     }
     
