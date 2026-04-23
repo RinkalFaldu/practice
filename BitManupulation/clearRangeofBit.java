@@ -9,6 +9,7 @@ public class clearRangeofBit {
     return n;
     }
     
+    // this function do the same thing but different way
     public static int clearIBits (int n, int i, int j){
         int a = ((~0)<<(j+1));
         int b = (1<<i) -1;
