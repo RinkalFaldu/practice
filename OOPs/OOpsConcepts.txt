@@ -26,7 +26,83 @@ Constructors: Constructors is a special methods which is invoked automatically a
 Types of Constructors
 Non-parameterized
 parameterized
-Copy Constructor
+Copy Constructor : copy constructor transfer properties of object one into second object
 
+Constructor ovrloading (polymorphisum) : when we create multiple constructors with different parameter. when we create new object appropriate constructor will be called
+Number of parameters: For example, one constructor with no arguments and another with two.
+Data types of parameters: For example, one using an int and another using a String.
+Order of parameters: For example, (int, String) versus (String, int) 
 
 Encapsulation : encapsulation is defined as the wrapping up of data & methods under a single unit. it also implements data hiding. e.g. class 
+
+shallow & Deep Copy :
+Shallow : it copy reference , and reflect changes , copied object pointing to the original object
+Deep : changes do not reflect , it create new copy of new object 
+
+Destructors : garbage collector work as Destructors we don't need to write Destructors
+
+Inheritance: is when properties & methods of base class (parent class) are passed on to a derived class (child class). 
+
+Types of Inheritance:
+Single level Inheritance:   Base class ----> Derived class
+Multi Level Inheritance:  Base class ----> Derived class -----> derived class
+Hierarchial Inheritance: Base class 
+                          /       \
+                         /         \
+                        /           \
+                    Derived class    Derived class
+
+Hybrid Inheritance: Base class 
+                     /       \
+                    /         \
+                   /           \
+            Derived class    Derived class
+                                |
+                                |
+                                |
+                                |
+                         Derived class
+Multiple Inheritance: (in c++)
+
+polymorphisum:  poly means many and morphism means forms
+
+Types of polymorphisum
+Compile Time polymorphisum: Method overloading 
+Run Time polymorphisum: Method overriding
+
+Method overloading : Multiple functions with the same name but different parameters
+Method overriding: Parent and child classes both contain the same function with a different definition
+
+Packages in java: package is a group of similar types of classes, interfaces and sub-Packages
+Types of packages 
+In built : e.g. util package
+User defined: writing package name on top of file to make that file of package
+
+
+Abstraction: Hiding all the innecessary details and showing only the important parts to the users
+To implement abstraction we use Abstract classes and interfaces
+
+Abstract Class: created by writing abstract key word infromt of class e.g. abstract class a
+cannot create an instance of abstract (Object) class
+can have abstract/non- abstract methods
+Can have constructors
+
+Class: is an blue print of object
+Interface: is an blue print of class is use to define following
+- multiple Inheritance
+- total abstraction 
+
+Interface
+- all methods are public, abstract & without implementation
+- Used to achieve total abstraction
+- variables in the interface are final, public and static
+- to define Interface we use inferface key word
+- to inheritate inferface we use implement key word
+
+Multiple inheritance : child class c has properties of A and B both
+
+A           B
+\           /
+ \         /
+  \      /
+      C

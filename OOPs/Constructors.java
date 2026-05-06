@@ -11,6 +11,7 @@ public class Constructors {
 class Student {
     String name;
     int roll;
+    String password;
     // constructor
     // Non-parameterized
     Student (){
