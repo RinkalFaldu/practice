@@ -1,0 +1,32 @@
+Classes & Objects
+Classes : Group of theses entities (interface). blue print of object
+Objects: entities in the real world. e.g. Pen. Object creted inside heap
+in class we have attributes (properties), and we have functions (behaviours)
+
+class name start with capital latter
+and function name start with lower case
+
+Access Modifiers     within class         within package          outside package by subclass only        outside package  
+Private                Y                       N                        N                                      N
+Default                Y                       Y                        N                                      N
+Protected              y                       y                        y                                      N
+Public                 Y                       Y                        Y                                      Y                   
+
+Getters & setters
+Get : to return the value
+Set : to modify the value
+
+this : this keyword is used to refer to the current object
+Constructors: Constructors is a special methods which is invoked automatically at the time of object creation
+- Constructors have the same name as class or structure.
+- Constructors don't have a return type. (Not even void)
+- Constructors are only called once, at object creation
+- Memory allocation happens when constructor is called.
+
+Types of Constructors
+Non-parameterized
+parameterized
+Copy Constructor
+
+
+Encapsulation : encapsulation is defined as the wrapping up of data & methods under a single unit. it also implements data hiding. e.g. class 
