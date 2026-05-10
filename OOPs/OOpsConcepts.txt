@@ -16,6 +16,16 @@ Getters & setters
 Get : to return the value
 Set : to modify the value
 
+we can not private and protected modifiers infront of class
+You can provide only a less restrictive or same-access modifier when overriding a method
+
+              Private         default           protected            public
+class          No               Yes                 No                Yes
+Nested Class   Yes              Yes                 Yes               Yes
+Constructor    Yes              Yes                 Yes               Yes
+Method         Yes              Yes                 Yes               Yes
+Field          Yes              Yes                 Yes               Yes
+
 this : this keyword is used to refer to the current object
 Constructors: Constructors is a special methods which is invoked automatically at the time of object creation
 - Constructors have the same name as class or structure.
@@ -42,6 +52,14 @@ Deep : changes do not reflect , it create new copy of new object
 Destructors : garbage collector work as Destructors we don't need to write Destructors
 
 Inheritance: is when properties & methods of base class (parent class) are passed on to a derived class (child class). 
+
+I can have parent class reference = child object
+class Vehicle{}
+class Car extends Vehicle{}
+True statment for above code 
+1. Car c = new Car();
+2. Vehicle v = new Vehicle();
+3. Vehicle v = new Car();
 
 Types of Inheritance:
 Single level Inheritance:   Base class ----> Derived class
@@ -72,6 +90,7 @@ Run Time polymorphisum: Method overriding
 
 Method overloading : Multiple functions with the same name but different parameters
 Method overriding: Parent and child classes both contain the same function with a different definition
+You can provide only a less restrictive or same-access modifier when overriding a method
 
 Packages in java: package is a group of similar types of classes, interfaces and sub-Packages
 Types of packages 
@@ -106,3 +125,19 @@ A           B
  \         /
   \      /
       C
+
+Static keyword: static keyword in java used to share the same veriable or method of given class
+we can use static key word for
+properties
+functions
+Blocks
+Mested Classes
+
+because of static methos or veriables all object can use same veriable. it saves memory and 
+
+Super keyword: super keyword is used to refr immediate parent class object.
+- to access parent's properties
+- to access parent's function
+- to access parent's constructor
+
+Constructor chaining 
