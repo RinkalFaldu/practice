@@ -141,3 +141,10 @@ Super keyword: super keyword is used to refr immediate parent class object.
 - to access parent's constructor
 
 Constructor chaining 
+
+Recursion: recursion is a method of solving a computational problem where the solution depends on solution to smaller instances of the smae problem.
+
+step to solve recursion 
+1. base case
+2. do some work
+3. inner call
