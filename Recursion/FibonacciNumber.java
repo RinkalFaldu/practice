@@ -1,5 +1,6 @@
 // fibonacci Number : 0 1 1 2 3 5 8 13 21
 // number at ith position is sum of 2 previous number 
+// time complexity O(2^n)
 package Recursion;
 
 public class FibonacciNumber {
