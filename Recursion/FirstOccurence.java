@@ -1,3 +1,5 @@
+// Time complexity = O(n)
+// space complexity = O(n)
 package Recursion;
 
 public class FirstOccurence {
