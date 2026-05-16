@@ -4,6 +4,7 @@
 // 2 * 1 has 1 way to place tiles
 // 2 * 3 has 3 ways to place tiles
 // 2 * 4 has 5 ways to place tiles
+// amazon interview question
 package Recursion;
 
 public class Tiling {
