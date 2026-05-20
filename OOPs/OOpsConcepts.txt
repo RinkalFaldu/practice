@@ -148,3 +148,14 @@ step to solve recursion
 1. base case
 2. do some work
 3. inner call
+
+Sorting Algorithems
+1. bubble Sorting
+2. selection Sorting
+3. insertion sorting 
+4. counting sorting
+5. inbuilt sorting
+
+Divide & Conquer
+6. Merge Sort
+7. quick Sort
