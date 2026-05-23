@@ -70,3 +70,38 @@ public class MergeSort {
     }
     
 }
+
+
+
+// different way to do merge sort with one argument in function
+ /*public int[] sortArray(int[] nums) {
+        int[] temp=new int[nums.length];
+        mergeSort(nums,0,nums.length-1,temp);
+        return nums;
+    }
+    public void mergeSort(int[] arr, int start , int end , int[] temp){
+        if(start==end) return ;
+        int mid=start+(end-start)/2;
+        mergeSort(arr,start,mid, temp);
+        mergeSort(arr,mid+1,end,temp);
+        merge(arr,start,mid,end,temp);
+    }
+    public void merge(int[] arr,int start,int mid, int end, int[] temp){
+        int i=start;
+        int j=mid+1;
+        int k=start;
+        while(i<=mid && j<=end){
+            if(arr[i] <=arr[j]){
+                temp[k++]=arr[i++];
+            }
+            else{
+                temp[k++]=arr[j++];
+            }
+        }
+        while(i<=mid) temp[k++] =arr[i++];
+        while(j<=end) temp[k++]=arr[j++];
+
+        for(int p=start;p<=end;p++){
+            arr[p]=temp[p];
+        }
+    } */
