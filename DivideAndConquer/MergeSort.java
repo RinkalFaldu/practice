@@ -42,11 +42,13 @@ public class MergeSort {
             }
             k++;
         }
-        // for leftover elements of 1st sorted part
+        // this loop used when one part has more element compare to other part e.g. left 1,2,3,4   right 1,2,3,4,5,6,7
+        // for leftover elements of 1st sorted part. left part has more element
+
          while (i <= mid){
             temp [k++] = arr[i++];
          }
-         // for leftover elements of 2nd sorted part
+         // for leftover elements of 2nd sorted part. right part has more element
          while (j <= end){
             temp[k++] = arr[j++];
          }
