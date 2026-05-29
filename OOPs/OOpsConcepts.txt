@@ -157,7 +157,7 @@ Sorting Algorithems
 5. inbuilt sorting
 
 Divide & Conquer
-6. Merge Sort
+6. Merge Sort       time coplexity = O(nlogn)       space complexity O(n) due to usage of tem array
 7. quick Sort
 
 Time Complexity & space Complexity
@@ -185,3 +185,7 @@ O(2^n)
 Space Complexity : input space + auxiliary space
 
 Recursive algorithms time and space Complexity
+do call stack analysis to find time complexity
+time complexity if O(n) for linear recursion
+space complexity used by call stack O(n)
+Time complexity = work done = no of calls * work in each call
