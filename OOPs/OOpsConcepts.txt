@@ -150,7 +150,7 @@ step to solve recursion
 3. inner call
 
 Sorting Algorithems
-1. bubble Sorting
+1. bubble Sorting    : best case time complexity   O(n^2)             worst case time complexity : O(n^2)
 2. selection Sorting
 3. insertion sorting 
 4. counting sorting
@@ -159,3 +159,29 @@ Sorting Algorithems
 Divide & Conquer
 6. Merge Sort
 7. quick Sort
+
+Time Complexity & space Complexity
+Order Complexity Analysis
+
+Amount of space or time taken up by an algorithms/ code as function of input size.
+Not the actual time taken.
+
+Theoretical analysis of linear search
+Linear time complexity = O(n) 
+Constant time complexity = O(1)
+
+Big O Botation: Big O gives us upper bound
+
+Big Omega Notation : lower bound or best case time complexity 
+Big theta: average bound or average time complexity
+
+Common Complexities smallest to largest
+O(1)
+O(logn)
+O(n)
+O(n^2)
+O(2^n)
+
+Space Complexity : input space + auxiliary space
+
+Recursive algorithms time and space Complexity
