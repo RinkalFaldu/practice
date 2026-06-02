@@ -190,4 +190,7 @@ time complexity if O(n) for linear recursion
 space complexity used by call stack O(n)
 Time complexity = work done = no of calls * work in each call
 
-
+Types of Backtracking
+Decision          : Answer in terms of yes or no
+Optimization      : find optimize path
+Enumeration       :
