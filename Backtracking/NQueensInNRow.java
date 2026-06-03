@@ -1,32 +1,7 @@
-// Time complexity O(n!)
 package Backtracking;
 
-public class NQueens {
-    public static boolean isSafe(char board[][], int row, int col){
-       // vertical up
-       for (int i = row-1; i>=0; i--){
-        if (board[i][col] == 'Q'){
-            return false;
-        }
-       }
-       // diag left up
-       for (int i = row -1, j = col -1; i>=0 && j >=0; i--, j--){
-           if (board[i][j] == 'Q'){
-            return false;
-           }
-        
-       }
-       // diag right up 
-       for (int i = row -1, j = col +1; i>=0 && j < board.length; i--, j++){
-           if (board[i][j] == 'Q'){
-            return false;
-           }
-        
-       }
-       return true; 
-
-    }
-
+public class NQueensInNRow {
+   
 
     public static void nqueens(char board[][], int row){
         // base case
@@ -37,12 +12,11 @@ public class NQueens {
         }
         // column loop
         for(int col =0; col<board.length; col++){
-            if (isSafe(board, row, col) == true){
-                board[row][col] = 'Q';
-                nqueens(board, row+1);
-                board[row][col] = 'X';    // backtracking
+            board[row][col] = 'Q';
+            nqueens(board, row+1);
+            board[row][col] = 'X';    // backtracking
 
-            }
+            
             
         }
     }
@@ -57,7 +31,7 @@ public class NQueens {
     }
     
     public static void main(String[] args) {
-        int n =4;
+        int n =2;
         char board[][] = new char[n][n];
         for (int i =0; i<n; i++){
             for(int j =0; j<n; j++){
@@ -66,5 +40,5 @@ public class NQueens {
         }
         nqueens(board, 0);
     }
-    
+
 }
