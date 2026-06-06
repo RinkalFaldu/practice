@@ -1,7 +1,6 @@
-// Time complexity O(n!)
 package Backtracking;
 
-public class NQueens {
+public class PrintOneSolutionNQueen {
     public static boolean isSafe(char board[][], int row, int col){
        // vertical up
        for (int i = row-1; i>=0; i--){
@@ -28,24 +27,26 @@ public class NQueens {
     }
 
 
-    public static void nqueens(char board[][], int row){
+    public static boolean nqueens(char board[][], int row){
         // base case
         if (row == board.length){
-            printBoard(board);
-            count++;
-            return;
+            // printBoard(board);
+            //count++;
+            return true;
 
         }
         // column loop
         for(int col =0; col<board.length; col++){
             if (isSafe(board, row, col) == true){
                 board[row][col] = 'Q';
-                nqueens(board, row+1);
+               if(nqueens(board, row+1)){
+                return true;
+               }
                 board[row][col] = 'X';    // backtracking
-
             }
-            
+              
         }
+        return false;
     }
     public static void printBoard (char board[][]){
         System.out.println("______________________ chess board ____________________");
@@ -65,8 +66,14 @@ public class NQueens {
                 board[i][j] = 'X';
             }
         }
-        nqueens(board, 0);
-        System.out.println("total ways to solve n queens =" + count);
+       if( nqueens(board, 0)) {
+            System.out.println("solution is possible");
+            printBoard(board);
+       }else{
+        System.out.println("solution is not possible");
+       }
+       // System.out.println("total ways to solve n queens =" + count);
     }
+    
     
 }

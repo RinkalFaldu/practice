@@ -1,4 +1,6 @@
 // time complexity O(n * n!)
+// to solve this problem  in linear time we can use mathematical formula
+// (n -1 + m-1)!/((n-1)! (m-1)!))
 package Backtracking;
 
 public class FindPermutation {
@@ -14,7 +16,7 @@ public class FindPermutation {
            String  NewStr = str.substring (0, i) + str.substring (i+1);
             permutation(NewStr, ans+curr);
         }
-        // recursion
+       
 
     }
     public static void main(String[] args) {

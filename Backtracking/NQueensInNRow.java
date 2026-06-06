@@ -2,7 +2,6 @@ package Backtracking;
 
 public class NQueensInNRow {
    
-
     public static void nqueens(char board[][], int row){
         // base case
         if (row == board.length){
@@ -39,6 +38,7 @@ public class NQueensInNRow {
             }
         }
         nqueens(board, 0);
+        
     }
 
 }
