@@ -1,7 +1,7 @@
 package ArrayList;
 import java.util.ArrayList;
 
-// time complexity O(n)
+// 2 pointer approach time complexity O(n)
 
 public class OptmizeContainerWithMostWater {
     public static int getMaxWater (ArrayList<Integer> height){
