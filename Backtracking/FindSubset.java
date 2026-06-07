@@ -1,5 +1,6 @@
 // Time complexity = O(n * 2^n)
 // Space Complexity = O(n)
+// for string length n, string can have 2^n subset
 package Backtracking;
 
 public class FindSubset {

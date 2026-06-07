@@ -194,3 +194,17 @@ Types of Backtracking
 Decision          : Answer in terms of yes or no
 Optimization      : find optimize path
 Enumeration       :
+
+
+Array                                        ArrayList
+fixed size                                   dynamic size
+primitive data types can be stores           primitive data types can't be stores directly
+
+In ArrayList different operation can be done
+Add Element               O(1)
+Get Element               O(1)
+Remove Element            O(n)
+Set Element at Index      O(n)
+Containst Element         O(n)
+
+whenever we utilize full arraylist computer creates double sized arraylist and copy all elements of previous list in new list
