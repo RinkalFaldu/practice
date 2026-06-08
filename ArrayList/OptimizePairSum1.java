@@ -1,5 +1,6 @@
 package ArrayList;
 import java.util.ArrayList;
+// time complexity O(n)
 
 public class OptimizePairSum1 {
     public static boolean checkSum (ArrayList<Integer> list, int target){
