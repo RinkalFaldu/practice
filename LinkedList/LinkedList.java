@@ -236,8 +236,144 @@ public class LinkedList {
         }
         return false;
     }
+    public static void removeCycle (){
+        // detect cycle
+        Node slow = head;
+        Node fast = head;
+        boolean iscycle = false;
+        while (fast !=null && fast.next != null){
+            slow = slow.next;
+            fast = fast.next.next;
+
+            if (fast == slow){
+                iscycle = true;
+                break;
+            }
+        }
+        if (iscycle == false){
+            return;
+        }
+        // find meeting point
+        slow = head;
+        Node prev = null;     // last node
+        while (slow !=fast){
+            prev = fast;
+            slow = slow.next;
+            fast = fast.next;
+        }
+        // remove cycle -> last.next = null
+        prev.next = null;
+
+    }
+    private Node  getMid (Node head){
+        Node slow = head;
+        Node fast = head.next;
+        while (fast != null && fast.next !=null){
+            slow = slow.next;
+            fast = fast.next.next;
+        }
+        return slow;    // mid
+
+    }
+    private Node merge (Node leftHead, Node rightHead){
+        Node mergedLL = new Node (-1);
+        Node temp = mergedLL;
+
+        while (leftHead !=null && rightHead != null){
+            if (leftHead.data <= rightHead.data){
+               temp.next = leftHead;
+               leftHead = leftHead.next;
+               temp = temp.next;
+            }
+            else {
+                temp.next = rightHead;
+                rightHead = rightHead.next;
+                temp = temp.next;
+            }
+        }
+
+        while (leftHead != null){
+            temp.next = leftHead;
+            leftHead = leftHead.next;
+            temp = temp.next;
+
+        }
+        while (rightHead != null){
+            temp.next = rightHead;
+            rightHead = rightHead.next;
+            temp = temp.next;
+        }
+        return mergedLL.next;
+    }
+    public Node mergeSort (Node head){
+        if (head == null || head.next == null){
+            return head;
+        }
+        // find mid
+        Node mid = getMid(head);
+
+        // left & right MS
+        Node rightHead = mid.next;
+        mid.next = null;
+        Node newLeft = mergeSort (head);
+        Node newRight = mergeSort( rightHead);
+
+        // merge
+        return merge(newLeft, newRight);
+    }
+    public void zigZag (){
+        //Find mid
+        Node slow = head;
+        Node fast = head.next;
+        while (fast != null && fast.next != null){
+            slow = slow.next;
+            fast = fast.next.next;
+        }
+        Node mid = slow;
+
+        // reverse 2nd half
+        Node curr = mid.next;
+        mid.next = null;
+        Node prev = null;
+        Node next;
+        while (curr != null){
+            next = curr.next;
+            curr.next = prev;
+            prev = curr;
+            curr = next;
+        }
+        Node leftHead = head;
+        Node rightHead = prev;
+        Node nextLeft, nextRight;   // this veriable used to store nodes becaue we are breaking connections
+
+        while (leftHead != null && rightHead != null){
+             nextLeft = leftHead.next; 
+             leftHead.next = rightHead;
+             nextRight = rightHead.next;
+             rightHead.next = nextLeft;
+
+             leftHead = nextLeft;
+             rightHead = nextRight;
+        }
+
+    }
+
     public static void main (String args[]){
         LinkedList list = new LinkedList();
+        list.addLast(1);
+        list.addLast(2);
+        list.addLast(3);
+        list.addLast(4);
+        list.addLast(5);
+        list.addLast(6); 
+
+        list.print();
+        list.zigZag();
+        list.print();
+
+        // list.head = list.mergeSort(list.head);
+        // list.print();
+
      //   list.head = new Node(1);
       //  list.head.next = new Node (2);
       
@@ -272,11 +408,14 @@ public class LinkedList {
     // System.out.println(list.checkPalindrome());
 
     // to check linked list has cycle or not
-    head = new Node(1);
-    head.next = new Node(2);
-    head.next.next = new Node (3);
-    head.next.next.next =  head;
-    System.out.println(list.isCycle());
+    // head = new Node(1);
+    // Node temp = new Node (2);
+    // head.next = temp;
+    // head.next.next = new Node (3);
+    // head.next.next.next =  temp;
+    // System.out.println(list.isCycle());
+    // removeCycle();
+    // System.out.println(list.isCycle());
 
     }
     

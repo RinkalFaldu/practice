@@ -27,7 +27,7 @@ public class MergeSort {
         int temp[] = new int[end - start +1];
         int i = start; // iterator for left part
         int j = mid + 1; // iterator for right part
-        int k = 0; // iterator for tem arr
+        int k = 0; // iterator for temp arr
 
         while (i <= mid && j <= end){
             if (arr[i] < arr[j]){
