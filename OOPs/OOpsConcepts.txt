@@ -208,3 +208,11 @@ Set Element at Index      O(n)
 Containst Element         O(n)
 
 whenever we utilize full arraylist computer creates double sized arraylist and copy all elements of previous list in new list
+
+LinkedList
+Add in Linked list : 
+1. add First
+  - create new node
+  - new nodes's next = head      (new node's next is head)
+  - head = new node               (make new node as head)
+2. add Last 
