@@ -228,3 +228,14 @@ Implementation
 Array          - using array we can creae fixed size stack
 ArrayList      - veriable size
 LinkedList     - veriable size
+
+
+Queue // first in first out
+element out from front and add from back   Front ___________________   Rear    
+Add  - enque O(1)          
+Remove - Dequeue O(1)
+Peek O(1) - front O(1)
+
+Implementation 
+Array = fixed size , remve O(n), add O(1) we can use array to create circular Queue
+LinkedList = add, remove, peek O(1)
