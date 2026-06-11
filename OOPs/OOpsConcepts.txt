@@ -239,3 +239,38 @@ Peek O(1) - front O(1)
 Implementation 
 Array = fixed size , remve O(n), add O(1) we can use array to create circular Queue
 LinkedList = add, remove, peek O(1)
+
+Deque : Means Double ended Queue   (we can add and remove element from both end e.g we can add and remove from front, and we can remove and add from back (rear))
+Dequeue : means removing element 
+Queue: we add element from back (rear) and remove from front
+--- PHASE 1: ENQUEUE ---
+Added 1 -> Current Queue: [1]
+                           ▲
+                     front & Rear
+Added 2 -> Current Queue: [1, 2]
+                           ▲   ▲
+                        Front  Rear
+Added 3 -> Current Queue: [1, 2, 3]
+                           ▲     ▲
+                        Front   Rear
+Added 4 -> Current Queue: [1, 2, 3, 4]
+                           ▲        ▲
+                       Front       Rear
+Added 5 -> Current Queue: [1, 2, 3, 4, 5]
+                           ▲           ▲
+                        Front         Rear
+
+--- PHASE 2: DEQUEUE ---
+Removed 1 -> Remaining Queue: [2, 3, 4, 5]
+                               ▲        ▲
+                            front      rear
+Removed 2 -> Remaining Queue: [3, 4, 5]
+                               ▲     ▲
+                            front   rear
+Removed 3 -> Remaining Queue: [4, 5]
+                               ▲  ▲
+                            front rear
+Removed 4 -> Remaining Queue: [5]
+                                ▲
+                          front&rear
+Removed 5 -> Remaining Queue: []

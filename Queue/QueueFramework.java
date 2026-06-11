@@ -12,11 +12,11 @@ public class QueueFramework {
         q.add(1);
         q.add(2);
         q.add(3);
-
+       // System.out.print(q);
         while (!q.isEmpty()){
-            System.out.println(q.peek());
-            q.remove();
-        }
+             System.out.println(q.peek());
+             q.remove();
+         }
         
     }
     

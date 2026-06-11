@@ -265,7 +265,9 @@ public class LinkedList {
         prev.next = null;
 
     }
-    private Node  getMid (Node head){
+// we choose fast = head.next as fast because we want first half's last node 
+// as middle and this middle we use in merge sort
+    private Node  getMid (Node head){                  
         Node slow = head;
         Node fast = head.next;
         while (fast != null && fast.next !=null){
