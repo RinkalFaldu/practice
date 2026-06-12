@@ -311,3 +311,34 @@ queue : 1 2 3 4 5 6
 Hight = difference between root to leaf
 tree's height can be calculate based on nodes or edges
 
+Binary Search Tree
+      1
+   2     5
+1    3      6
+properties 
+1. Left Subtree Nodes < Root
+2. Right Subtree Nodes > Root
+3. Left & Right Subtree and also BST with no duplicates
+
+Inorder traversal on BST gives sorted order
+
+Average case time complexity for searching on BST is log(n) or O(H)   worst case 
+
+Strategy : Most problem will be solved using recursion i.e. by dividing into subporoblems & making recursive calls on subtrees
+
+Delete a Node :  first search node and then delete
+cases 
+1. No child (Leaf Node) : return null to parent
+2. One child : delete node & replace with child node
+3. Two Children : Replace value with inorder successor , Delete the node for inordr successor
+- inorder successor in BST = left most node in right Sub tree
+
+
+Print in Range k1 = 5 & k2 =12
+case 1 : k1 <= root <= k2  Traverse Left  and righ sub tree
+case 2 : root > k2 = right sub tree 
+case 3 : root < k1 = left sub tree  
+
+valid BST 
+Approach : check inorder traversal of BST is sorted or not
+Approach2 : check if max value in left subtree < node and min value in right subtree > node
