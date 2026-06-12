@@ -281,3 +281,33 @@ Greedy Algorithem : greedy algorithms is the problem solving technique where we 
 2. sorting
 3. no fixed rule
 4. 
+
+Binary Tree 
+1 2 4 -1 -1 5 -1 -1 3 -1 6 -1 -1
+-1 means Null
+Create preorder tree from given data
+
+       1
+   2      3
+4    5       6
+
+Tree Traversal
+a. preorder = 1. Root 2. LeftSubtree 3. Right Subtree
+e.g. 1 2 4 5 3 6
+      1
+   2      3
+4    5       6
+
+b. Inorder = 1. LeftSubtree 2. Root 3. RighSubTree
+4 2 5 1 3 6
+
+c. Postorder = 1. LeftSubtree 2. RighSubTree 3. Root
+4 5 2 6 3 1
+
+d. Level Order : 
+1 2 3 4 5 6
+queue : 1 2 3 4 5 6
+
+Hight = difference between root to leaf
+tree's height can be calculate based on nodes or edges
+
