@@ -73,6 +73,7 @@ public class CalculateHight {
         return new Info(diam, height);
 
     }
+    
 
     public static void main(String[] args) {
         /*    1
@@ -96,6 +97,7 @@ public class CalculateHight {
     System.out.println(diameter(root));
     System.out.println(diameter2(root).diam);
     System.out.println(diameter2(root).height);
+    
 
 
     }
