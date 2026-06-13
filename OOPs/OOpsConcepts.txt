@@ -342,3 +342,27 @@ case 3 : root < k1 = left sub tree
 valid BST 
 Approach : check inorder traversal of BST is sorted or not
 Approach2 : check if max value in left subtree < node and min value in right subtree > node
+
+AVL Tree : whenver we have | HL - HT | > 2 do rotation 
+case 1. LL do right rotation
+Case 2 : RR do left rotation
+Case 3 LR : left rotation and right rotation
+case 4 RL : right rotation and left rotation
+
+Red Black tree
+
+
+Heap / priority queue
+element with lower priorit goes first in queue (element with minimum priority goes first)
+
+priorit queue : add 
+Heap 
+Binary Tree : at most 2 Children
+Complete Binary Tree : CBT is a BT in which all the level are completly filled except possibly the last one, which is filled from the left to right.
+Heap Order Propery : Children >= Parent (MinHeap)
+                     Children <= parent (maxHeap)
+
+get left child and right child from array representation of heap
+for index = i 
+left child = 2i +1
+right child = 2i + 2 
