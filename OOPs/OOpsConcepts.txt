@@ -366,3 +366,12 @@ get left child and right child from array representation of heap
 for index = i 
 left child = 2i +1
 right child = 2i + 2 
+
+Map : HashMap, LinkedHashMap, TreeMap
+Set : Hashset, LinkedHashset, TreeSet
+
+HashMap : (key, value) , key is unique, unorder map
+put (key, value) O(1)
+get(key) O(1)
+containskey (key) O(1)
+remove (key) O(1)

@@ -280,7 +280,14 @@ public class LinkedList {
     private Node merge (Node leftHead, Node rightHead){
         Node mergedLL = new Node (-1);
         Node temp = mergedLL;
+       // left : 1 -> 4 -> 7
+       // right: 2 -> 3 -> 8
 
+       // result: 1 -> 2 -> 3 -> 4 -> 7 -> 8
+       //-1 -> 1
+        //leftHead  = 4 -> 7
+        //rightHead = 2 -> 3 -> 8
+        //temp      = 1
         while (leftHead !=null && rightHead != null){
             if (leftHead.data <= rightHead.data){
                temp.next = leftHead;
