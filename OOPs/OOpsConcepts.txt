@@ -375,3 +375,11 @@ put (key, value) O(1)
 get(key) O(1)
 containskey (key) O(1)
 remove (key) O(1)
+
+LinkedMap : print element in order of insertion
+
+HashSet : no duplicates , unordered, Null is allowed
+HashSet  internally implemented using HashMap as dummy value
+add (key) O(1)
+contains (key) O(1)
+remove(key) O(1)
