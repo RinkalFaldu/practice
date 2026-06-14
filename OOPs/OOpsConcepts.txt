@@ -383,3 +383,41 @@ HashSet  internally implemented using HashMap as dummy value
 add (key) O(1)
 contains (key) O(1)
 remove(key) O(1)
+
+Graph
+1. Uni- directional A -----> B (one way)
+2. Un-directed A-------B 
+3. Bi-Directional A <------>  (two way)
+4. weigthed or unweighted 
+
+Storing a Graph
+Adjacency list : ArrayList<List>, or Array <ArrayList>
+Adjacency Matrix
+Edge list
+2d matrix (implicit Graph)
+
+Adjacency List : List of Lists
+ArrayList <ArrayList> or Array<ArrayList>  or hashmap <int, lists>
+Array<ArrayList> is most optimize for finding neibor 
+Edge List : stores information about endges 
+e.g. {{0 (source),1 (destination)}, {1, 2}, {1, 3}, {2,3}}, I can also store weight if given as theird elment of each list
+2D Matrix (implicit Graph)
+
+Adjacency matrix
+not optimize fro searching edge for particular vertex
+
+Application Graphs
+a. maps (shorted path)
+b. social network
+c. delivery network (shortest cyclic route), bus route
+d. physics & chemistry (molecules)
+e. routing algorithms (computer networks)
+f. machine learning (computation graphs)
+g. dependency graphs
+h. computer vision
+i. graph databases 
+j. research 
+
+Graph Traversals
+1. Breadth First Search (BFS) : got to immediate neighbors first (level order traversal)
+2. Depth First Search (DFS) : keep going to the 1st neighbor
