@@ -25,7 +25,7 @@ public class CycleDetectionInUndirectedGraphUsingDFS {
         graph[0].add(new Edge (0, 3)); // vertex 0
 
         graph[1].add(new Edge (1, 0)); // vertex 1
-        graph[1]. add(new Edge(1, 2));
+        graph[1].add(new Edge(1, 2));
 
         graph[2]. add(new Edge(2, 0));
         graph[2].add(new Edge(2,1));

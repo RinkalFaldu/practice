@@ -433,3 +433,6 @@ odd cycle : not bipartite
 
 Cycle detection in directed graph (DFS)
 Topological sorting only used in DAG (Directed Acyclyc graph) 
+
+
+// dijkstra's algo is not nessecarily gives correct answer when we have negative weight given for negative weight we use bellman ford algorithm
