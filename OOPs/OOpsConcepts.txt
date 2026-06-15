@@ -421,3 +421,15 @@ j. research
 Graph Traversals
 1. Breadth First Search (BFS) : got to immediate neighbors first (level order traversal)
 2. Depth First Search (DFS) : keep going to the 1st neighbor
+
+Cycle in Graph
+Undirected graph we can use DFS, BFS, DSU (Disjoint set union) to detect cycle in graph
+Directed : DFS, BFS, topological sort (kahn's algorithm) to detect cycle in graph
+
+Bipartite Graph
+Acyclic (means graph without cycle) is Bipartite
+Even Cycle : is also Bipartite
+odd cycle : not bipartite
+
+Cycle detection in directed graph (DFS)
+Topological sorting only used in DAG (Directed Acyclyc graph) 
