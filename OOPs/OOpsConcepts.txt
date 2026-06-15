@@ -436,3 +436,13 @@ Topological sorting only used in DAG (Directed Acyclyc graph)
 
 
 // dijkstra's algo is not nessecarily gives correct answer when we have negative weight given for negative weight we use bellman ford algorithm
+
+Minimum spanning tree (MST)
+// A minimum spanning tree or minimum weight spanning tree is subset of the edges of connected, 
+ edge-weighted undirected graph that connects all the vertices together, without any cycles and ith the minimmum posible total edge weight.
+ it covers all vertices not all edges without any cycles
+
+// mst is for edge-undirected weighted graph 
+// dijkstra : positive weight (directed or undirected)
+// Bellman for : negative and postive weight (directed or undirected)
+// prim's algorithm : MST : edged -undirected weighted 
