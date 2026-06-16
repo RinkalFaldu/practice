@@ -2,8 +2,9 @@ package Graphs;
 // There are n cities connected by some bumber of flights. you are given an array flights where flights[i] = [from, to price]
 // indicates that there is flight. you are also given three integers src, dst, and k, return the cheapest price from src to dst with at most k stops.
 // if there is no such route return -1;
+// map or google map related question usually solved using graph
 
-import java.util.ArrayList;
+import java.util.*;
 
 public class CheapestFlightsWithinKStops {
     static class Edge {
@@ -18,30 +19,75 @@ public class CheapestFlightsWithinKStops {
             
         }
     }
-    static void CreateGraph (ArrayList<Edge> graph[]){
+    
+    public static void createGraph (int flights [][],  ArrayList <Edge> [] graph){
         for (int i =0; i<graph.length; i++){
             graph[i] = new ArrayList<>();
+   
         }
-        graph[0].add(new Edge(0, 1, 10));  // verted 0
-        graph[0].add(new Edge(0, 2, 15));  // verted 0
-        graph[0].add(new Edge(0, 3, 30));  // verted 0
 
-        graph[1].add(new Edge (1, 0, 10)); // vertex 1
-        graph[1].add(new Edge (1, 3, 40)); // vertex 1
-        
-        graph[2]. add(new Edge(2, 0, 15));
-        graph[2]. add(new Edge(2, 3, 50));
-        
-        graph[3].add(new Edge(3,1, 40));
-        graph[3].add(new Edge(3,2, 50));
+        for (int i =0 ;i< flights.length; i++){
+            int src = flights[i][0];
+            int dest = flights[i][1];
+            int weight = flights[i][2];
+            Edge e = new Edge (src, dest, weight);
+            graph[src].add(e);
+        }
+    }
+    static class Info {
+        int v;
+        int  cost;
+        int stops;
+        public Info (int v, int c, int s){
+            this.v = v;
+            this.cost = c;
+            this.stops = s;
+        }
+    }
+    public static int cheapestFlight (int n, int flights[][], int src, int dest, int k){
+        ArrayList <Edge> [] graph = new ArrayList[n];  // Array of Arraylist
+        createGraph(flights, graph);
+        int dist [] = new int [n];
+        for (int i =0; i <n; i++){
+            if (i != src){
+                dist[i] = Integer.MAX_VALUE;
+            }
+        }
+        Queue<Info> q = new LinkedList<>();
+        q.add(new Info (src, 0, 0));
+
+        while (!q.isEmpty()){
+            Info curr = q.remove();
+            if (curr.stops > k){
+                break;
+            }
+
+            for (int i =0; i< graph[curr.v].size(); i++){
+                Edge e = graph[curr.v].get(i);
+                int u = e.src;
+                int v= e.dest;
+                int wt = e.weight;
+
+                if (dist[u] + wt < dist[v] && curr.stops <=k){
+                    dist[v] = curr.cost + wt;
+                    q.add(new Info(v, dist[v], curr.stops+1));
+                }
+            }
+        }
+        // dist[dest]
+        if (dist[dest] == Integer.MAX_VALUE){
+            return -1;
+        } else {
+            return dist[dest];
+        }
 
     }
-
     public static void main(String[] args) {
-        int V =6;
-        ArrayList <Edge> [] graph = new ArrayList[V];  // Array of Arraylist
-        CreateGraph(graph);
-
+        int n =4;
+        int flights [][] = {{0,1,100}, {1,2,100}, {2, 0, 100}, {1, 3, 600}, {2, 3, 200}};
+        int src = 0, dest = 3, k =1;
+        ArrayList <Edge> [] graph = new ArrayList[n];  // Array of Arraylist
+       System.out.println(cheapestFlight (n, flights, src, dest, k));
         
     }
 }
