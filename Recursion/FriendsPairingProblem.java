@@ -7,6 +7,8 @@
 // 2nd way = (a, b), c
 // 3rd way = (a, c), b
 // 4th way = (c, b), a
+
+// in {a, b, c, d, e, f}  (a) want to choose pari it can make pair with n-1 candidate 
 package Recursion;
 
 public class FriendsPairingProblem {
@@ -16,7 +18,7 @@ public class FriendsPairingProblem {
         }
         int Single = Pairing(n-1);
         int PairedUp = Pairing (n-2);
-        int WaysofPair = (n-1) * PairedUp;
+        int WaysofPair = (n-1) * PairedUp;  // different ways to pair if one person choose pairing  n-1 person can 
         int totalWays = Single + WaysofPair;
         return totalWays;
     }

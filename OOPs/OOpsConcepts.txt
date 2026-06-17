@@ -446,3 +446,29 @@ Minimum spanning tree (MST)
 // dijkstra : positive weight (directed or undirected)
 // Bellman for : negative and postive weight (directed or undirected)
 // prim's algorithm : MST : edged -undirected weighted 
+
+Dynamic Programming
+DP is optimized recursion
+How to identify DP?
+a. Optimal Problem : Greedy (least, most, min, max, largest, smallest)
+b. some choice is given (multiple branches in recursion tree)
+
+DP definition : Dynamic Programming is a technique is computer programming that helps to efficiently
+solve a class of problems that have overlapping subproblems and optimal substructure property
+
+Why of DP
+Memoization (Top Down) : 1. do recursion 2. subproblems 
+Tabulation (Bottom Up) : iteration, it is efficient compare to memoization in some problems
+
+7 important Qs of dynamic programming
+fibonacci
+0-1 knapsack
+unbounded knapsack
+LCS (longest common subsequence)
+kadane's algorithem (Arrays)
+catalan Number
+DP on Grid (2d Arrays)
+
+Recursion 
+Case 1 : Min, Max, Largest, smallest (comparison)
+Case 2: Count, Sum, Ways, total ways, all ways (sum)
