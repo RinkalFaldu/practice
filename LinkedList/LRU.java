@@ -48,6 +48,7 @@ public class LRU {
 
     // Insert or update the key-value pair
     public void put(int key, int value) {
+        // key is in map so get this value and move to head
         if (map.containsKey(key)) {
             Node node = map.get(key);
             node.value = value; // Update the value

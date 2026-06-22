@@ -38,6 +38,12 @@ Non-parameterized
 parameterized
 Copy Constructor : copy constructor transfer properties of object one into second object
 
+Student (Student s1){
+   this.name = s1.name;
+   this.roll = s1.roll;
+}
+
+
 Constructor ovrloading (polymorphisum) : when we create multiple constructors with different parameter. when we create new object appropriate constructor will be called
 Number of parameters: For example, one constructor with no arguments and another with two.
 Data types of parameters: For example, one using an int and another using a String.
@@ -52,6 +58,7 @@ Deep : changes do not reflect , it create new copy of new object
 Destructors : garbage collector work as Destructors we don't need to write Destructors
 
 Inheritance: is when properties & methods of base class (parent class) are passed on to a derived class (child class). 
+synatax of inheritance : class Fish (child class) extends Animal  (parent class){ }
 
 I can have parent class reference = child object
 class Vehicle{}
@@ -83,10 +90,11 @@ Hybrid Inheritance: Base class
 Multiple Inheritance: (in c++)
 
 polymorphisum:  poly means many and morphism means forms
+doing same thing in different forms
 
 Types of polymorphisum
-Compile Time polymorphisum: Method overloading 
-Run Time polymorphisum: Method overriding
+Compile Time polymorphisum (static):  Method overloading ; Multiple functions with the same name but different parameters
+Run Time polymorphisum (dynamic): Method overriding : have same function name 
 
 Method overloading : Multiple functions with the same name but different parameters
 Method overriding: Parent and child classes both contain the same function with a different definition
@@ -98,13 +106,17 @@ In built : e.g. util package
 User defined: writing package name on top of file to make that file of package
 
 
-Abstraction: Hiding all the innecessary details and showing only the important parts to the users
+Abstraction: Hiding all the unnecessary details and showing only the important parts to the users
 To implement abstraction we use Abstract classes and interfaces
 
-Abstract Class: created by writing abstract key word infromt of class e.g. abstract class a
-cannot create an instance of abstract (Object) class
-can have abstract/non- abstract methods
-Can have constructors
+Abstract Class: created by writing abstract key word infromt of class e.g. abstract class a { }
+-cannot create an instance of abstract (Object) class
+-can have abstract/non- abstract methods 
+-Can have constructors : it assign default value to child object unless child class does not change this 
+-abstract method can not have implementation in parent class it's implementation 
+   define child or sub class, and it is mendetory to implement abstract method in  (inheritance)
+
+- created object of child class but first child class's constructor make call to parent class
 
 Class: is an blue print of object
 Interface: is an blue print of class is use to define following
@@ -112,12 +124,22 @@ Interface: is an blue print of class is use to define following
 - total abstraction 
 
 Interface
-- all methods are public, abstract & without implementation
-- Used to achieve total abstraction
-- variables in the interface are final, public and static
-- to define Interface we use inferface key word
+to define Interface we use inferface key word
 - to inheritate inferface we use implement key word
+- all methods are public, abstract & without implementation 
+- Used to achieve total abstraction, and for multiple inheritance 
+- variables in the interface are final, public and static
+- by default all methods in interface are abstract so i have to write implementation of this method in child class
 
+-  syntax 
+interface chessPlayer { 
+   void moves();
+   }
+class Queen implements chessPlayer {
+   public void moves (){
+      system.out.println(" up, down, left, right, diagonal")
+   }
+}
 Multiple inheritance : child class c has properties of A and B both
 
 A           B
@@ -131,9 +153,9 @@ we can use static key word for
 properties
 functions
 Blocks
-Mested Classes
+Nested Classes
 
-because of static methos or veriables all object can use same veriable. it saves memory and 
+because of static method or veriables all object can use same veriable. it saves memory and 
 
 Super keyword: super keyword is used to refr immediate parent class object.
 - to access parent's properties
@@ -472,3 +494,41 @@ DP on Grid (2d Arrays)
 Recursion 
 Case 1 : Min, Max, Largest, smallest (comparison)
 Case 2: Count, Sum, Ways, total ways, all ways (sum)
+
+
+Class name start with capital letter
+Mthode use camel case;
+private String password can not accessible using myAccount.password = " " have to create getter and setters for it
+return type of setters is void setColor(String newColor){this.color = newColor }
+String getColor(){ return this.color}
+
+
+LRU : implemens using hashmap and doubly linked list
+LRU implementation : node class with constructor (key, value, prev, nex)
+Next = properties deffine cpacity, new hashmap, head, tail 
+next = create constructor of file name means main class
+Next  = get method (with key), put method (key and value), addNodetohead (Node node), removeNode (Node node), moveTo Head (Node node)
+
+// key is in map so get this value and move to head
+        if (map.containsKey(key)) {
+            Node node = map.get(key);
+            node.value = value; // Update the value
+            moveToHead(node);   // Mark as most recently used
+        } else {
+            // If capacity is reached, evict the least recently used element
+            if (map.size() == capacity) {
+                Node lruNode = tail.prev; // Node right before dummy tail
+                removeNode(lruNode);
+                map.remove(lruNode.key);  // Remove from fast lookup map
+            }
+            
+            // Insert the brand new node
+            Node newNode = new Node(key, value);
+            addNodeToHead(newNode);
+            map.put(key, newNode);
+        }
+    }
+
+
+OOPs 
+Encapsulation : binding data and methods in 

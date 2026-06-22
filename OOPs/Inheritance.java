@@ -5,9 +5,7 @@ public class Inheritance {
 
         Dog dobby = new Dog();
             dobby.eat();
-            dobby.walk ();
-            
-        
+            dobby.walk (); 
     }
     
 }

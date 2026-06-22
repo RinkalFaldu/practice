@@ -3,6 +3,7 @@ public class OOPS {
         Pen p1 = new Pen();          // constructure. special function
         p1.setColor("Blue");
         System.out.println(p1.getColor());
+        p1.setColor("Yello");
 
         p1.setTip (5);
         System.out.println(p1.getTip());
