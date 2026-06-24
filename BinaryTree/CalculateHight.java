@@ -13,14 +13,7 @@ public class CalculateHight {
         }
     }
 
-    public static int height(Node root){
-        if (root == null){
-            return 0;
-        }
-        int leftHight = height(root.left);
-        int rightHight = height (root.right);
-       return Math.max (leftHight,rightHight) +1;
-    }
+    
     public static int count (Node root){ // it counts number of nodes in tree
         if (root == null){
             return 0;
@@ -38,7 +31,15 @@ public class CalculateHight {
        return leftSum + rightSum + root.data;
         
     }
-
+    public static int height(Node root){
+        if (root == null){
+            return 0;
+        }
+        int leftHight = height(root.left);
+        int rightHight = height (root.right);
+       return Math.max (leftHight,rightHight) +1;
+    }
+     // diameter is no of nodes in the longest path between 2 leaves
     public static int diameter (Node root){  // O(n^2) not optimize
         if (root == null){
             return 0;

@@ -71,11 +71,11 @@ public class LRU {
     // --- Internal Helper Methods for Doubly Linked List Manipulation ---
 
     // Adds a node right after the dummy head node
-    private void addNodeToHead(Node node) {
-        node.next = head.next;
-        node.prev = head;
-        head.next.prev = node;
-        head.next = node;
+    private void addNodeToHead(Node newNode) {
+        newNode.next = head.next;
+        newNode.prev = head;
+        head.next.prev = newNode;
+        head.next = newNode;
     }
 
     // Detaches an existing node from its current position in the list

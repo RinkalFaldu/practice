@@ -87,10 +87,10 @@ public class BuildBST {
             printInRange(root.right, k1, k2);
            
         } else if (root.data < k1){
-            printInRange(root.left, k1, k2);
+            printInRange(root.right, k1, k2);
 
         } else {
-            printInRange(root.right, k1, k2);
+            printInRange(root.left, k1, k2);
         }
     }
     public static void printPath (ArrayList<Integer> path){
@@ -141,6 +141,7 @@ public class BuildBST {
         // root = delete(root, 10);
         // inorder(root);
         printInRange(root, 5, 12);
+        System.out.println();
         printRoot2Leaf(root, new ArrayList<>());
 
         if (isValidBST(root, null, null)){
