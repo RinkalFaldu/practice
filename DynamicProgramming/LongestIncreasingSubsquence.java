@@ -44,9 +44,37 @@ public class LongestIncreasingSubsquence {
         Arrays.sort(arr2);
        return  lcs(arr1, arr2);
     }
+
+    public static int lisMemo(int arr[]) {
+        int n = arr.length;
+        Integer[][] memo = new Integer[n][n + 1];
+        return lisMemoHelper(arr, 0, -1, memo);
+    }
+
+    private static int lisMemoHelper(int[] arr, int idx, int prevIndex, Integer[][] memo) {
+        if (idx == arr.length) {
+            return 0;
+        }
+
+        int memoIndex = prevIndex + 1;
+        if (memo[idx][memoIndex] != null) {
+            return memo[idx][memoIndex];
+        }
+
+        int taken = 0;
+        if (prevIndex == -1 || arr[idx] > arr[prevIndex]) {
+            taken = 1 + lisMemoHelper(arr, idx + 1, idx, memo);
+        }
+        int notTaken = lisMemoHelper(arr, idx + 1, prevIndex, memo);
+
+        memo[idx][memoIndex] = Math.max(taken, notTaken);
+        return memo[idx][memoIndex];
+    }
+
     public static void main(String[] args) {
-        int arr1[] = {50, 3, 10, 7, 40, 80};  // ans is 4 because 0f 3, 10, 40, 80 or 3, 7, 40, 80
-        System.out.println(lisTab(arr1));
+        int arr1[] = {50, 3, 10, 7, 40, 80};  // ans is 4 because of 3, 10, 40, 80 or 3, 7, 40, 80
+        System.out.println("Tabulation-style LIS: " + lisTab(arr1));
+        System.out.println("Memoization LIS: " + lisMemo(arr1));
 
     }
     

@@ -6,9 +6,9 @@ public class RodCutting {
     public static int rodCuttingTab (int length[], int price[], int totRod){
         int n = price.length;
         int dp[][] = new int [n+1][totRod+1];
-        // aign first row and col with 0 value for base case
+        // assign first row and col with 0 value for base case
         for (int i =0; i< n+1; i++){
-            for (int j =0; j < totRod +1; j++){      
+            for (int j =0; j < totRod +1; j++){
                 if (i ==0 || j ==0){
                     dp[i][j] =0;
                 }
@@ -27,11 +27,42 @@ public class RodCutting {
         }
         return dp[n][totRod];
     }
+
+    public static int rodCuttingMemo(int length[], int price[], int totRod) {
+        int n = price.length;
+        int[][] memo = new int[n + 1][totRod + 1];
+        for (int i = 0; i <= n; i++) {
+            for (int j = 0; j <= totRod; j++) {
+                memo[i][j] = -1;
+            }
+        }
+        return rodCuttingMemoHelper(length, price, n, totRod, memo);
+    }
+
+    private static int rodCuttingMemoHelper(int[] length, int[] price, int n, int totRod, int[][] memo) {
+        if (n == 0 || totRod == 0) {
+            return 0;
+        }
+
+        if (memo[n][totRod] != -1) {
+            return memo[n][totRod];
+        }
+
+        int include = 0;
+        if (length[n - 1] <= totRod) {
+            include = price[n - 1] + rodCuttingMemoHelper(length, price, n, totRod - length[n - 1], memo);
+        }
+        int exclude = rodCuttingMemoHelper(length, price, n - 1, totRod, memo);
+        memo[n][totRod] = Math.max(include, exclude);
+        return memo[n][totRod];
+    }
+
     public static void main(String[] args) {
         int length [] = {1, 2, 3, 4, 5, 6, 7, 8};
         int price [] = {1, 5, 8 , 9, 10, 17, 17, 20};
-       int  totRod =8;
-       System.out.println(rodCuttingTab(length, price, totRod));
+        int totRod = 8;
+
+        System.out.println("Tabulation result: " + rodCuttingTab(length, price, totRod));
+        System.out.println("Memoization result: " + rodCuttingMemo(length, price, totRod));
     }
-    
 }

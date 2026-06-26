@@ -34,6 +34,38 @@ public class EditDistance {
         return dp[n][m];
 
     }
+    
+    public static int editDistanceMemo(String word1, String word2) {
+        int n = word1.length();
+        int m = word2.length();
+        Integer[][] memo = new Integer[n + 1][m + 1];
+        return editDistanceMemoHelper(word1, word2, n, m, memo);
+    }
+
+    private static int editDistanceMemoHelper(String word1, String word2, int i, int j, Integer[][] memo) {
+        if (i == 0) {
+            return j;
+        }
+        if (j == 0) {
+            return i;
+        }
+        if (memo[i][j] != null) {
+            return memo[i][j];
+        }
+
+        if (word1.charAt(i - 1) == word2.charAt(j - 1)) {
+            memo[i][j] = editDistanceMemoHelper(word1, word2, i - 1, j - 1, memo);
+        } else {
+            int add = 1 + editDistanceMemoHelper(word1, word2, i, j - 1, memo);
+            int delete = 1 + editDistanceMemoHelper(word1, word2, i - 1, j, memo);
+            int replace = 1 + editDistanceMemoHelper(word1, word2, i - 1, j - 1, memo);
+            memo[i][j] = Math.min(add, Math.min(delete, replace));
+        }
+
+        return memo[i][j];
+    }
+
+   
     public static void main(String[] args) {
         String word1 = "intention";   
         String word2 = "execution";

@@ -54,6 +54,39 @@ public class StringConversion {
         
 
     }
+
+    public static int lcsMemo(String str1, String str2) {
+        int n = str1.length();
+        int m = str2.length();
+        Integer[][] memo = new Integer[n + 1][m + 1];
+        return lcsMemoHelper(str1, str2, n, m, memo);
+    }
+
+    private static int lcsMemoHelper(String str1, String str2, int i, int j, Integer[][] memo) {
+        if (i == 0 || j == 0) {
+            return 0;
+        }
+        if (memo[i][j] != null) {
+            return memo[i][j];
+        }
+        if (str1.charAt(i - 1) == str2.charAt(j - 1)) {
+            memo[i][j] = 1 + lcsMemoHelper(str1, str2, i - 1, j - 1, memo);
+        } else {
+            memo[i][j] = Math.max(
+                lcsMemoHelper(str1, str2, i - 1, j, memo),
+                lcsMemoHelper(str1, str2, i, j - 1, memo)
+            );
+        }
+        return memo[i][j];
+    }
+
+    public static void conversionMemo(String str1, String str2) {
+        int lcsLength = lcsMemo(str1, str2);
+        int delete = str1.length() - lcsLength;
+        int add = str2.length() - lcsLength;
+        System.out.println("add operation = " + add + " delete operation = " + delete);
+    }
+
     public static void main(String[] args) {
         // Test case: Convert "pear" to "sea"
         // LCS = "ea" (length 2)

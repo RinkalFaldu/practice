@@ -17,7 +17,7 @@ package DynamicProgramming;
 public class MinimumPartitioning {
     public static int minPartitionRec(int[] arr, int idx, int sum1, int totalSum) {
         if (idx == arr.length) {
-            return Math.abs(totalSum - 2 * sum1);
+            return Math.abs(totalSum - sum1);
         }
 
         // Include arr[idx] in subset1
