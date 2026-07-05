@@ -41,8 +41,12 @@
         if (idx > sj || idx < si){
             return;
         }
-       tree[i] = Math.max(tree[i], newVal);
-       if (si != sj){
+        if (si == sj){
+            tree[i] = newVal;
+        }
+       
+        if (si != sj){
+            tree[i] = Math.max(tree[i], newVal);
             int mid = (si + sj)/2;
             updateUtil(2*i+1, si, mid, idx, newVal);
             updateUtil(2*i+2, mid+1, sj, idx, newVal);
