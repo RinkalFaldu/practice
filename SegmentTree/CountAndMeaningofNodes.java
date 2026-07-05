@@ -13,6 +13,11 @@
 
 // Query on ST
 // Sum of numbers in a range from i to j
+
+// Max/Min Element Queries
+//given an arr[], we have to answer few question:
+//a. Output Max/Min for the subarray
+//b. Update the element at idx
 package SegmentTree;
 
 public class CountAndMeaningofNodes {
