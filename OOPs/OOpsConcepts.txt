@@ -536,3 +536,8 @@ Encapsulation : binding data and methods in
 Segment Tree : range queries same thing ask again again in certain range (e.g. subarray sum from i to j)
 why do we need segment trees?
 for large number of queries and update 
+
+
+Tries : or prefix tree, retrival trees
+store common things only one time, and 
+- it is K-ary tree
