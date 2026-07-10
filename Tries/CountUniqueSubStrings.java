@@ -11,7 +11,7 @@ package Tries;
 // for unique prefix count total number of nodes
 
 public class CountUniqueSubStrings {
-     static class Node {
+    static class Node {
         Node [] children =new Node [26];
         boolean eow;
         
